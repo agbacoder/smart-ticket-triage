@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Support\Facades\Route;
+use Sentry\Laravel\Integration;
+// use Illuminate\Cache\RateLimiting\Limit;
+// use Illuminate\Support\Facades\RateLimiter;
+// use Illuminate\Http\Request;
+
+
+return Application::configure(basePath: dirname(__DIR__))
+ 
+    ->withRouting(
+        commands: __DIR__.'/../routes/console.php',
+        using: function () {
+            Route::prefix('api/v1')
+                ->group(base_path('routes/api.php'));
+            Route::middleware('web')
+                ->group(base_path('routes/web.php'));
+        },
+    )
+    ->withMiddleware(function (Middleware $middleware) {
+        // RateLimiter::for('classify', function (Request $request) {
+        //     return Limit::perMinute(30)->by(
+        //         $request->user()?->id ?: $request->ip()
+        //     );
+        // });
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+        Integration::handles($exceptions);
+
+    })->create();
