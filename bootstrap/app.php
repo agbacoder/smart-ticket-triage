@@ -22,11 +22,7 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // RateLimiter::for('classify', function (Request $request) {
-        //     return Limit::perMinute(30)->by(
-        //         $request->user()?->id ?: $request->ip()
-        //     );
-        // });
+       
     })
     ->withExceptions(function (Exceptions $exceptions) {
         Integration::handles($exceptions);

@@ -14,7 +14,6 @@ class Ticket extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'user_id',
         'subject',
         'body',
         'status',

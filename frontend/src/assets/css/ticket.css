@@ -1,0 +1,207 @@
+.ticket-list {
+  padding: 1.5rem;
+  background: var(--bg-color);
+color: var(--text-color);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+.ticket-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.ticket-list__title {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-color, #222);
+}
+
+.ticket-list__actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.ticket-list__search,
+.ticket-list__filter {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.05); 
+  color: var(--text-color);
+}
+
+:root.dark .ticket-list__search,
+:root.dark .ticket-list__filter {
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: #444;
+}
+
+
+.ticket-list__new-button {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.25s;
+}
+.ticket-list__new-button:hover {
+  background: var(--primary-color-dark);
+}
+
+
+/* Table */
+.ticket-list__table {
+  width: 100%;
+  border-collapse: collapse;
+background: var(--bg-color);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ticket-list__table th,
+.ticket-list__table td {
+  border-bottom: 1px solid #eee;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.ticket-list__table th {
+background: var(--bg-color);
+  font-weight: 600;
+  color: var(--text-color, #222);
+}
+
+/* Status badges */
+.ticket-list__status-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ticket-list__status-badge--open {
+  background: #fff8e1;
+  color: #f9a825;
+}
+
+.ticket-list__status-badge--in_progress {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.ticket-list__status-badge--closed {
+  background: #e0f2f1;
+  color: #00695c;
+}
+
+/* Category dropdown */
+.ticket-list__category-dropdown {
+padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.05); 
+  color: var(--text-color);
+}
+
+:root.dark .ticket-list__category-dropdown
+ {
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: #444;
+}
+
+/* Confidence + tooltip */
+.ticket-list__confidence {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.ticket-list__tooltip {
+  cursor: help;
+  color: var(--primary-color, #f9a825);
+  font-weight: bold;
+}
+
+/* Note badge */
+.ticket-list__note-badge {
+  font-size: 1.2rem;
+  color: var(--primary-color, #f9a825);
+}
+
+/* Classify button */
+.ticket-list__classify-button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--primary-color, #f9a825);
+  background: #fff;
+  color: var(--primary-color, #f9a825);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.25s;
+}
+.ticket-list__classify-button:hover {
+  background: var(--primary-color, #f9a825);
+  color: #fff;
+}
+
+:root.dark .ticket-list__classify-button:hover
+ {
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: #444;
+}
+
+/* Spinner */
+.ticket-list__spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--primary-color, #f9a825);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pagination */
+.ticket-list__pagination {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ticket-list__pagination-button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.25s, color 0.25s;
+}
+
+.ticket-list__pagination-button:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}

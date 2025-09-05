@@ -49,7 +49,6 @@ class TicketFactory extends Factory
             'confidence'  => null,
             'created_at'  => now()->subDays(rand(0, 14)),
             'updated_at'  => now(),
-            'user_id'     => '1',
 
         ];
     }

@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #f9a825; /* yellowish orange */
+  --primary-color-dark: #f57f17;
+  --text-color: #213547;
+  --bg-color: #ffffff;
+  --alt-bg-color: #f9f9f9;
+ --border-color: #dcdcdc;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark */
+:root.dark {
+  --primary-color: #f9a825;
+  --bg-color: #242424;
+  --text-color: #ffffffde;
+  --alt-bg-color: #1e1e1e;
+  --border-color: #444444;
+}
+
+/* Reset defaults */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Buttons (base style, overridden in tickets.css etc.) */
+button {
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Utility */
+.card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* Remove #app constraints (important!) */
+#app {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}

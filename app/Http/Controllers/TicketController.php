@@ -33,7 +33,6 @@ class TicketController extends Controller
             'body'    => 'required|string',
         ]);
 
-        $data['user_id'] = $request->user()->id;  
         $ticket = $this->ticketService->create($data);
 
         return response()->json([

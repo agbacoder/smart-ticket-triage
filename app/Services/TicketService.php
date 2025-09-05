@@ -22,8 +22,7 @@ class TicketService
 
     public function list(array $filters = [], int $perPage = 10)
     {
-        $query = Ticket::query();
-
+        $query = Ticket::query()->orderBy('created_at', 'desc');
         if (!empty($filters['status'])) {
             $query->where('status', $filters['status']);
         }

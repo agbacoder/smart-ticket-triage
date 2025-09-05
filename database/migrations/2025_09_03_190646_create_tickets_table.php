@@ -21,7 +21,6 @@ return new class extends Migration
         $table->text('explanation')->nullable();
         $table->decimal('confidence', 3, 2)->nullable(); 
         $table->timestamps();
-        $table->foreignId('user_id')->constrained()->cascadeOnDelete();
 
         });
     }
