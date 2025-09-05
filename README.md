@@ -5,7 +5,7 @@ It allows submitting support tickets, queueing AI classification jobs, viewing/f
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 Follow these steps (≤ 10) to get started:
 
@@ -99,7 +99,7 @@ SENTRY_LARAVEL_DSN=
 
 ---
 
-## 🤔 Assumptions & Trade-offs
+## Assumptions & Trade-offs
 
 - **AI Classification**: Uses OpenAI if enabled, otherwise generates dummy results for local development.  
 - **Polling**: The frontend polls the ticket detail API until classification results are ready.  
@@ -110,7 +110,7 @@ SENTRY_LARAVEL_DSN=
 
 ---
 
-## 💡 What I’d Do With More Time
+##  What I’d Do With More Time
 
 - Add CSV export of tickets list.  
 - Improve dashboard with multiple charts and filtering.  
@@ -120,7 +120,7 @@ SENTRY_LARAVEL_DSN=
 
 ---
 
-## 📊 Tech Stack
+## Tech Stack
 
 - **Backend**: Laravel 11, PHP 8.2, Redis (queues), MySQL/Postgres  
 - **Frontend**: Vue 3 (Options API), Vite, Chart.js  
@@ -129,7 +129,7 @@ SENTRY_LARAVEL_DSN=
 
 ---
 
-## 🧑‍💻 Bulk Classification Command
+## Bulk Classification Command
 
 Run classification for multiple tickets in one go:
 
